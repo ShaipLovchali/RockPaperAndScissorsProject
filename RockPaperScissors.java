@@ -8,6 +8,22 @@ public class RockPaperScissors {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        playGame();
+
+        System.out.print("Do you want to play again? ");
+        String answer = scanner.nextLine();
+
+        while (answer.equals("y") || answer.equals("Y")) {
+            playGame();
+
+            System.out.print("Do you want to play again? ");
+            answer = scanner.nextLine();
+        }
+
+    }
+
+    public static void playGame() {
+        Scanner scanner = new Scanner(System.in);
         System.out.print("Choose [r]ock, [p]aper or [s]cissors: ");
         String playerMove = scanner.nextLine();
 
@@ -45,11 +61,10 @@ public class RockPaperScissors {
                 || (playerMove.equals(SCISSORS) && computerMove.equals(PAPER))) {
             System.out.println("You win! Congratulations!!");
         }else if ((playerMove.equals(ROCK) && computerMove.equals(PAPER)) || (playerMove.equals(PAPER) && computerMove.equals(SCISSORS))
-                    || (playerMove.equals(SCISSORS) && computerMove.equals(ROCK))) {
+                || (playerMove.equals(SCISSORS) && computerMove.equals(ROCK))) {
             System.out.println("You lose :(");
         }else {
             System.out.println("The game was a draw!");
         }
-
     }
 }
