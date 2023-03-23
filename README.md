@@ -11,6 +11,6 @@ The player enters one of the following options:
   <li>"s" or "scissors"</li>
  </ol>
  
- After that the computer randomly chooses one of the three options, and then reveals whether you win, lose or it is a draw.
- The player has an option to play as many games as he wants.
+ <p>After that the computer randomly chooses one of the three options, and then reveals whether you win, lose or it is a draw.</p>
+ <p>The player also has an option to play as many games as he wants.</p>
  
